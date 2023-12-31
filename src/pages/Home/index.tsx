@@ -9,6 +9,7 @@ import { SVGProps, useRef, useState } from "react";
 import { JSX } from "react/jsx-runtime";
 import QuadriframeLogo from "../../assets/quadriframe-logo.png";
 import CopaRecifeLogo from "../../assets/copa-recife-logo.png";
+import { Link } from "react-router-dom";
 
 function Home() {
   const primaryFeatures = [
@@ -96,8 +97,9 @@ function Home() {
         <img
           src={ZedWallpaper}
           alt="Zed Wallpaper"
-          className={`absolute inset-0 w-full h-full object-cover object-center ${imageLoaded ? "opacity-100" : "opacity-0"
-            } transition-opacity duration-500 ease-in-out`}
+          className={`absolute inset-0 w-full h-full object-cover object-center ${
+            imageLoaded ? "opacity-100" : "opacity-0"
+          } transition-opacity duration-500 ease-in-out`}
           onLoad={handleImageLoad}
           draggable={false}
         />
@@ -109,8 +111,8 @@ function Home() {
               alt="Logo da Copa Recife"
               draggable={false}
             />
-            <div className="flex mt-8 gap-x-4 justify-center items-center">
-              <button className="text-base lg:text-lg text-white font-bold py-2 px-4 rounded hover:text-indigo-400">
+            <div className="flex mt-8 gap-x-4 justify-center items-center flex-col">
+              <button className="text-base lg:text-lg text-white font-bold px-4 rounded hover:text-indigo-400">
                 <a
                   href="https://docs.google.com/forms/d/e/1FAIpQLSeAhNCcrLeccb5o26AdtojU9yVqAeGOMEjGoka8eMeEzss0Wg/viewform?usp=sf_link"
                   target="_blank"
@@ -120,11 +122,17 @@ function Home() {
                 </a>
               </button>
               <button
-                className="text-base lg:text-lg text-white font-bold py-2 px-4 rounded hover:text-indigo-400"
+                className="text-base lg:text-lg text-white font-bold px-4 rounded hover:text-indigo-400"
                 onClick={handleAboutDivScroll}
               >
                 Saiba Mais
               </button>
+              <Link
+                to="/equipes"
+                className="text-base lg:text-lg text-white font-bold px-4 rounded hover:text-indigo-400"
+              >
+                Equipes
+              </Link>
             </div>
           </span>
         </div>
