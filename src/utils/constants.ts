@@ -3,6 +3,7 @@ import AGBLogo from "../assets/team-logos/AGB.jpeg";
 import ABKLogo from "../assets/team-logos/ABK.png";
 import ADFLogo from "../assets/team-logos/ADF.jpeg";
 import BHELogo from "../assets/team-logos/BHE.png";
+import CRVLogo from "../assets/team-logos/CRV.jpg";
 import DRXLogo from "../assets/team-logos/DRX.jpeg";
 import ETSLogo from "../assets/team-logos/ETS.png";
 import IDLLogo from "../assets/team-logos/IDL.png";
@@ -26,8 +27,8 @@ export const teams: Array<Team> = [
     acronym: "AGB",
     logoUrl: AGBLogo,
     victories: 0,
-    loses: 0,
-    gamesPlayed: 0,
+    loses: 1,
+    gamesPlayed: 1,
   },
   {
     name: "ALL BLACKS - ABK",
@@ -40,9 +41,9 @@ export const teams: Array<Team> = [
     ],
     acronym: "ABK",
     logoUrl: ABKLogo,
-    victories: 0,
-    loses: 0,
-    gamesPlayed: 0,
+    victories: 1,
+    loses: 1,
+    gamesPlayed: 2,
   },
   {
     name: "Amigos da Floresta - ADF",
@@ -55,9 +56,9 @@ export const teams: Array<Team> = [
     ],
     acronym: "ADF",
     logoUrl: ADFLogo,
-    victories: 0,
-    loses: 0,
-    gamesPlayed: 0,
+    victories: 1,
+    loses: 1,
+    gamesPlayed: 2,
   },
   {
     name: "Banhado em Euros - BHE",
@@ -84,9 +85,10 @@ export const teams: Array<Team> = [
       "Play Destroy#BR1",
     ],
     acronym: "CRV",
+    logoUrl: CRVLogo,
     victories: 0,
-    loses: 0,
-    gamesPlayed: 0,
+    loses: 1,
+    gamesPlayed: 1,
   },
   {
     name: "Dragon Rage X - DRX",
@@ -100,9 +102,9 @@ export const teams: Array<Team> = [
     ],
     acronym: "DRX",
     logoUrl: DRXLogo,
-    victories: 0,
-    loses: 0,
-    gamesPlayed: 0,
+    victories: 1,
+    loses: 1,
+    gamesPlayed: 2,
   },
   {
     name: "Espectros Sombrios - ETS",
@@ -116,8 +118,8 @@ export const teams: Array<Team> = [
     acronym: "ETS",
     logoUrl: ETSLogo,
     victories: 0,
-    loses: 1,
-    gamesPlayed: 1,
+    loses: 2,
+    gamesPlayed: 2,
   },
   {
     name: "Inter de Limão - IDL",
@@ -130,9 +132,9 @@ export const teams: Array<Team> = [
     ],
     acronym: "IDL",
     logoUrl: IDLLogo,
-    victories: 0,
+    victories: 2,
     loses: 0,
-    gamesPlayed: 0,
+    gamesPlayed: 2,
   },
   {
     name: "Light Storm Gaming - LSG",
@@ -148,9 +150,9 @@ export const teams: Array<Team> = [
     ],
     acronym: "LSG",
     logoUrl: LSGLogo,
-    victories: 0,
-    loses: 0,
-    gamesPlayed: 0,
+    victories: 1,
+    loses: 1,
+    gamesPlayed: 2,
   },
   {
     name: "Que passeio - QUE",
@@ -164,9 +166,9 @@ export const teams: Array<Team> = [
     ],
     acronym: "QUE",
     logoUrl: QUELogo,
-    victories: 0,
-    loses: 0,
-    gamesPlayed: 0,
+    victories: 2,
+    loses: 1,
+    gamesPlayed: 3,
   },
   {
     name: "Shangai E-sports - SHG",
@@ -179,9 +181,9 @@ export const teams: Array<Team> = [
     ],
     acronym: "SHG",
     logoUrl: SHGLogo,
-    victories: 0,
+    victories: 2,
     loses: 0,
-    gamesPlayed: 0,
+    gamesPlayed: 2,
   },
   {
     name: "Team Vortex - TVX",
@@ -196,8 +198,8 @@ export const teams: Array<Team> = [
     acronym: "TVX",
     logoUrl: TVXLogo,
     victories: 0,
-    loses: 0,
-    gamesPlayed: 0,
+    loses: 1,
+    gamesPlayed: 1,
   },
   {
     name: "Time Liquido - TLD",
@@ -211,8 +213,8 @@ export const teams: Array<Team> = [
     acronym: "TLD",
     logoUrl: TLDLogo,
     victories: 0,
-    loses: 0,
-    gamesPlayed: 0,
+    loses: 2,
+    gamesPlayed: 2,
   },
   {
     name: "The boys - TBS",
@@ -225,9 +227,9 @@ export const teams: Array<Team> = [
     ],
     acronym: "TBS",
     logoUrl: TBSLogo,
-    victories: 0,
+    victories: 1,
     loses: 0,
-    gamesPlayed: 0,
+    gamesPlayed: 1,
   },
 ];
 
@@ -244,30 +246,63 @@ export const rounds = [
       {
         team1: "TVX",
         team2: "TBS",
-        winner: "",
+        winner: "TBS",
       },
       {
         team1: "QUE",
         team2: "SHG",
-        winner: "",
+        winner: "SHG",
       },
       {
         team1: "CRV",
         team2: "ABK",
-        winner: "",
+        winner: "ABK",
       },
       {
         team1: "IDL",
         team2: "LSG",
-        winner: "",
+        winner: "IDL",
       },
-      { team1: "TLD", team2: "ADF", winner: "" },
-      { team1: "DRX", team2: "AGB", winner: "" },
+      { team1: "TLD", team2: "ADF", winner: "ADF" },
+      { team1: "DRX", team2: "AGB", winner: "DRX" },
     ],
   },
   {
-    toBeDetermined: true,
+    toBeDetermined: false,
     startAt: "06/01 a partir das 9h",
+    matches: [
+      {
+        team1: "ETS",
+        team2: "QUE",
+        winner: "QUE",
+      },
+      {
+        team1: "LSG",
+        team2: "TLD",
+        winner: "LSG",
+      },
+      {
+        team1: "ABK",
+        team2: "SHG",
+        winner: "SHG",
+      },
+      {
+        team1: "ADF",
+        team2: "IDL",
+        winner: "IDL",
+      },
+      { team1: "QUE", team2: "DRX", winner: "QUE" },
+      {
+        team1: "CRV",
+        team2: "TVX",
+        winner: "",
+      },
+      {
+        team1: "TBD",
+        team2: "TBD",
+        winner: "",
+      },
+    ],
   },
   {
     toBeDetermined: true,
